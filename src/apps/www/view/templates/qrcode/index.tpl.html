@@ -1,0 +1,60 @@
+<div class="container">
+<div class="row">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<p><b>二维码测试</b></p>
+				<label for="qrData" class="col-sm-2 control-label">二维码内容</label>
+
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="qrData" placeholder="hello">
+				</div>
+
+				<div class="col-sm-offset-2 col-sm-10" style="margin-top:10px;">
+					<button class="btn btn-default" onclick="javascript:doGenQr(this); return false;">生成</button>
+				</div>
+		</div>
+	</div>
+	<div class="col-md-8 col-md-offset-2">
+		<div id="qrcodePreview">
+			<p>生成的二维码</p>
+            <img id="qrcodeImg" src="/qrcode.php?action=generate&qrData=hello" />
+		</div>
+	</div>
+<script type="text/javascript">
+function doGenQr(eventObj) {
+	var qrdata = $("#qrData").val();
+
+	var jsonParam = {
+		'action':'generate',
+		'_charset':'utf-8',
+		'ecLevel':'3',
+		'brushPix':'4',
+		'imgMargin':'5',
+		'qrData':qrdata
+	};
+	var queryStr = $.param(jsonParam);
+    $("#qrcodeImg").attr("src", '/qrcode.php?'+queryStr);
+}
+
+function doJSON(eventObj) {
+	var qrData = $("#qrData").val();
+	alert(qrData);
+	$.ajax({
+		type: "post",
+        url : '/qrcode.php',
+		data : {
+			'action':'generate',
+			'_charset':'utf-8',
+			'ecLevel':'3',
+			'brushPix':'4',
+			'imgMargin':'5',
+			'qrData':qrData,
+		},
+		success : function(data){
+			var html = data;
+			$("div#qrcodePreview").html(html);
+		}
+	});
+}
+</script>
+</div>

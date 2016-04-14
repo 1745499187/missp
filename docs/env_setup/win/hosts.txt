@@ -1,0 +1,7 @@
+# add below lines to %win32%\System32\drivers\etc\hosts
+
+127.0.0.1 aicire.com
+127.0.0.1 www.aicire.com
+127.0.0.1 tool.aicire.com
+127.0.0.1 refer.aicire.com
+127.0.0.1 test.aicire.com

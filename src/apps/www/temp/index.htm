@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>跨境测试工具平台</title>
+			<link charset="utf-8" rel="stylesheet" href="./css/bootstrap.css" media="all" />
+	<link charset="utf-8" rel="stylesheet" href="./css/bootstrap-theme.css" media="all" />
+	<link charset="utf-8" rel="stylesheet" href="./css/globaltool-core.css" media="all" />
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/index.htm">Global Tool</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      	<!-- 需要激活的tab只需要在li的class中加入active即可 -->
+        <li><a href="/index.htm">主页 <span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+          <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">测试流程 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="http://qa.inc.alipay.net/tcenter/index.php" target="_blank">TCenter</a></li>
+           </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">测试工具 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+          	<li><a href="/operateView.htm">活动预览</a></li>
+            <li><a href="/genGlobalCap.htm">生成海外直购请款文件</a></li>
+            <li><a href="/genUatpCap.htm">生成UATP请款文件</a></li>
+            <li class="divider"></li>
+            <li><a href="/createTaoBaoTrade.htm">淘宝交易创建</a></li>
+            <li><a href="/interfaceParameter.htm">接口测试异常用例生成</a></li>
+            <li><a href="/mvnCheck.htm">MVN变更检查</a></li>
+            <li><a href="http://dev.lab.alipay.net/DataCenter/index.php?r=user/corpRealName" target="_blank">创建商户</a></li>
+            <li><a href="http://dev.lab.alipay.net/DataCenter/index.php?r=user/customer" target="_blank">创建认证用户</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">提交</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">预留坑位 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div id="container" class="bdw container-fluid">
+    <div class="container">
+        <div class="col-md-10 col-md-offset-1">
+        	<form class="form-horizontal" action="operateView.htm" method="post" enctype="multipart/form-data">
+        	    <div class="control-group">
+        	        <div class="form-inline">
+        	            <lable>选择csv文件</lable>
+        	            <input class="form-control" type="file" name="uploadFile" />
+        	            <button class="btn-sm btn-success" type="submit" id="import">导入</button>
+        	        </div>
+        	    </div>
+        	</form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row item-row">
+            <div class="col-md-4 " >
+                <div class="container-fluid item-frame item-bg-main">
+                    <div class="row item-row-title">
+                        <div class="item-title">
+                        阿大饼屋
+                        </div>
+                    </div>
+                    <div class="row item-row-img">
+                        <div class="item-img-top" style="background: url('https://os.alipayobjects.com/rmsportal/xKgnCQvzOtFFlZM.jpg'); background-size:100% 100%;">
+                            <div class="item-img-top-discount">
+                                <span style="font-size: 55px;">7</span>&nbsp;折
+                            </div>
+                            专享7折，全场不要钱
+                        </div>
+                    </div>
+                    <div class="row item-row-intro">
+                        <div class="item-intro col-md-9">
+                            <div class="item-intro-title">
+                                King Power Duty Free
+                            </div>
+                            <div class="item-intro-digest">
+                                这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <img class="item-intro-img" src="https://os.alipayobjects.com/rmsportal/sDOZdReAuCVNjrz.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" >
+                <div class="container-fluid item-frame item-bg-detail">
+                    <div class="row item-row-title">
+                        <div class="item-title">
+                        分店详情
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="item-detail-title">
+                            分店详情
+                            </div>
+                            <div class="item-detail-content">
+                            这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" >
+                <div class="container-fluid item-frame item-bg-detail">
+                    <div class="row item-row-title">
+                        <div class="item-title">
+                        活动须知
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="item-detail-title">
+                            活动须知
+                            </div>
+                            <div class="item-detail-content">
+                            这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？这是简介，瞅啥瞅？
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	<script charset="utf-8" src="./js/jquery.js"></script>
+	<script charset="utf-8" src="./js/bootstrap.js"></script>
+	<script charset="utf-8" src="./js/globaltool-core.js"></script>
+			<div class="ftw">
+		<div class="container-fluid">
+			<ul class="ftw-links" style="padding:0;">
+				<li><a href="#">主页</a></li>
+				<li><a href="#">link1</a></li>
+				<li><a href="#">link2</a></li>
+			</ul>
+			<p>Copyright @Forexprod, all rights reserved</p>
+		</div>
+	</div>
+</body>
+</html>

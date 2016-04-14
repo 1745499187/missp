@@ -1,0 +1,47 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<p><b>{$output.caseTitle}</b></p>
+			<p class="well">{$output.caseDesc}</p>
+			<form class="form-inline" role="form" style="margin-top:20px;" onsubmit="javascript:doSearch(this);return false;">
+				  <div class="form-group">
+				    <label class="sr-only" for="qStr">搜索内容</label>
+				    <input type="text" class="form-control" id="qStr" placeholder="搜索内容">
+				  </div>
+				  <button type="submit" class="btn btn-default">Search</button>
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div id="testResult" class="col-md-offset-1 col-md-10" style="margin-top:30px;border:1px solid #ccc;min-height:200px;">
+			结果显示区
+		</div>
+	</div>
+<script type="text/javascript">
+function doSearch(eventObj) {
+	$.ajax({
+		url:'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&rsz=8&start=1&q=' + encodeURIComponent(eventObj.qStr.value),
+		dataType : 'jsonp',
+		success: function(json){
+			var res = '';
+			if(json.responseStatus == 200) {
+				res += "<ul>";
+				for(var i in json.responseData.results){
+					var obji = json.responseData.results[i];
+					res += "<li><div>";
+					res += "<h5>"+obji.title+"</h5>";
+					res += "<a target='_blank' href='"+obji.url+"'>"+obji.unescapedUrl+"</a>&nbsp;&nbsp;&nbsp;&nbsp;";
+					res += "<a target='_blank' href='"+obji.cacheUrl+"'><span class='label label-warning'>快照</span></a>";
+					res += "</div></li>";
+				}
+				res += "</ul>";
+			}
+			else {
+				res = "<span class='label label-warning'>"+json.responseDetails+"</span>";
+			}
+			$("div#testResult").html(res);
+		}
+	});
+}
+</script>
+</div>

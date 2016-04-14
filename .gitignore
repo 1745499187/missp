@@ -1,0 +1,12 @@
+**/.classpath
+**/.project
+**/.settings/
+**/log/
+**/logs/
+**/*.log
+**/*.log.*
+**/target/
+**/.DS_Store
+**/.pmd
+**/*.iml
+**/cache/
